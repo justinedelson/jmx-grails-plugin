@@ -8,7 +8,7 @@ import org.apache.log4j.Logger
 
 
 class JmxGrailsPlugin {
-    def version = 0.5-alpha-1
+    def version = "0.5-alpha-1"
     def dependsOn = [:]
 
    
@@ -22,6 +22,11 @@ Provides ability to expose any service as an MBean
 
     // URL to the plugin's documentation
     def documentation = "http://grails.org/Jmx+Plugin"
+    
+    def pluginExcludes = [
+            "grails-app/i18n/messages.properties",
+            "web-app/**/*"
+    ]
 
     def doWithSpring = {
 
